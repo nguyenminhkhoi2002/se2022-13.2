@@ -69,7 +69,7 @@ public class GioHangActivity extends AppCompatActivity {
                             if (MainActivity.manggiohang.size() <= 0) {
                                 txtthongbao.setVisibility(View.VISIBLE);
                             } else {
-                                txtthongbao.setVisibility(View.VISIBLE);
+                                txtthongbao.setVisibility(View.INVISIBLE);
                                 gioHangAdapter.notifyDataSetChanged();
                                 EvenUltil();
                             }

@@ -167,7 +167,12 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new GridLayoutManager(getApplicationContext(),2));
         recyclerView.setAdapter(sanphamAdapter);
-        if (manggiohang == null) {
+//        if (manggiohang == null) {
+//            manggiohang = new ArrayList<>();
+//        }
+        if (manggiohang != null) {
+
+        } else {
             manggiohang = new ArrayList<>();
         }
     }

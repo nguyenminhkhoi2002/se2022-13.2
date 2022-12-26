@@ -1,6 +1,6 @@
 package com.example.appshopping.adapter;
 
-import static android.view.View.*;
+//import static android.view.View.*;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -49,9 +49,10 @@ public class GioHangAdapter extends BaseAdapter {
         public ImageView imggiohang;
         public Button btnminus, btnvalues, btnplus;
     }
-    ViewHolder viewHolder = null;
+
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
+        ViewHolder viewHolder = null;
         if (view == null) {
             viewHolder = new ViewHolder();
             LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
@@ -77,57 +78,59 @@ public class GioHangAdapter extends BaseAdapter {
         viewHolder.btnvalues.setText(gioHang.getSoluongsp()+"");
         int sl = Integer.parseInt(viewHolder.btnvalues.getText().toString());
         if (sl >= 10) {
-            viewHolder.btnplus.setVisibility(INVISIBLE);
-            viewHolder.btnminus.setVisibility(VISIBLE);
+            viewHolder.btnplus.setVisibility(View.INVISIBLE);
+            viewHolder.btnminus.setVisibility(View.VISIBLE);
         } else if (sl <= 1) {
-            viewHolder.btnminus.setVisibility(INVISIBLE);
+            viewHolder.btnminus.setVisibility(View.INVISIBLE);
         } else if (sl >= 1) {
-            viewHolder.btnplus.setVisibility(VISIBLE);
-            viewHolder.btnminus.setVisibility(VISIBLE);
+            viewHolder.btnplus.setVisibility(View.VISIBLE);
+            viewHolder.btnminus.setVisibility(View.VISIBLE);
         }
-        viewHolder.btnplus.setOnClickListener(new OnClickListener() {
+        ViewHolder finalViewHolder = viewHolder;
+        viewHolder.btnplus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                int slmoinhat = Integer.parseInt(viewHolder.btnvalues.getText().toString()) + 1;
+                int slmoinhat = Integer.parseInt(finalViewHolder.btnvalues.getText().toString()) + 1;
                 int slht = MainActivity.manggiohang.get(i).getSoluongsp();
                 long giaht = MainActivity.manggiohang.get(i).getGiasp();
                 MainActivity.manggiohang.get(i).setSoluongsp(slmoinhat);
                 long giamoinhat = (giaht * slmoinhat)/slht;
                 MainActivity.manggiohang.get(i).setGiasp(giamoinhat);
                 DecimalFormat decimalFormat = new DecimalFormat("###,###,###");
-                viewHolder.txtgiagiohang.setText(decimalFormat.format(giamoinhat) + " USDT");
+                finalViewHolder.txtgiagiohang.setText(decimalFormat.format(giamoinhat) + " USDT");
                 GioHangActivity.EvenUltil();
                 if (slmoinhat > 9) {
-                    viewHolder.btnplus.setVisibility(View.INVISIBLE);
-                    viewHolder.btnminus.setVisibility(View.VISIBLE);
-                    viewHolder.btnvalues.setText(String.valueOf(slmoinhat));
+                    finalViewHolder.btnplus.setVisibility(View.INVISIBLE);
+                    finalViewHolder.btnminus.setVisibility(View.VISIBLE);
+                    finalViewHolder.btnvalues.setText(String.valueOf(slmoinhat));
                 } else {
-                    viewHolder.btnminus.setVisibility(View.VISIBLE);
-                    viewHolder.btnplus.setVisibility(View.VISIBLE);
-                    viewHolder.btnvalues.setText(String.valueOf(slmoinhat));
+                    finalViewHolder.btnminus.setVisibility(View.VISIBLE);
+                    finalViewHolder.btnplus.setVisibility(View.VISIBLE);
+                    finalViewHolder.btnvalues.setText(String.valueOf(slmoinhat));
                 }
             }
         });
-        viewHolder.btnminus.setOnClickListener(new OnClickListener() {
+        ViewHolder finalViewHolder1 = viewHolder;
+        viewHolder.btnminus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                int slmoinhat = Integer.parseInt(viewHolder.btnvalues.getText().toString()) - 1;
+                int slmoinhat = Integer.parseInt(finalViewHolder1.btnvalues.getText().toString()) - 1;
                 int slht = MainActivity.manggiohang.get(i).getSoluongsp();
                 long giaht = MainActivity.manggiohang.get(i).getGiasp();
                 MainActivity.manggiohang.get(i).setSoluongsp(slmoinhat);
                 long giamoinhat = (giaht * slmoinhat)/slht;
                 MainActivity.manggiohang.get(i).setGiasp(giamoinhat);
                 DecimalFormat decimalFormat = new DecimalFormat("###,###,###");
-                viewHolder.txtgiagiohang.setText(decimalFormat.format(giamoinhat) + " USDT");
+                finalViewHolder1.txtgiagiohang.setText(decimalFormat.format(giamoinhat) + " USDT");
                 GioHangActivity.EvenUltil();
                 if (slmoinhat < 2) {
-                    viewHolder.btnminus.setVisibility(View.INVISIBLE);
-                    viewHolder.btnplus.setVisibility(View.VISIBLE);
-                    viewHolder.btnvalues.setText(String.valueOf(slmoinhat));
+                    finalViewHolder1.btnminus.setVisibility(View.INVISIBLE);
+                    finalViewHolder1.btnplus.setVisibility(View.VISIBLE);
+                    finalViewHolder1.btnvalues.setText(String.valueOf(slmoinhat));
                 } else {
-                    viewHolder.btnminus.setVisibility(View.VISIBLE);
-                    viewHolder.btnplus.setVisibility(View.VISIBLE);
-                    viewHolder.btnvalues.setText(String.valueOf(slmoinhat));
+                    finalViewHolder1.btnminus.setVisibility(View.VISIBLE);
+                    finalViewHolder1.btnplus.setVisibility(View.VISIBLE);
+                    finalViewHolder1.btnvalues.setText(String.valueOf(slmoinhat));
                 }
             }
         });
