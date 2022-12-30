@@ -22,7 +22,7 @@
                 android:layout_height="?attr/actionBarSize"
                 android:background="#FFFFFF"
                 app:titleTextColor="#FF9800"
-                app:title="SHOPPE FAKE"></androidx.appcompat.widget.Toolbar>
+                app:title="Binance Market"></androidx.appcompat.widget.Toolbar>
 
             <ViewFlipper
                 android:id="@+id/viewFlipper"

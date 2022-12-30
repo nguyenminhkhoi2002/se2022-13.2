@@ -38,6 +38,16 @@ public class GioHangActivity extends AppCompatActivity {
         EvenUltil();
         CatchOnItemListView();
         EventButtonContinue();
+        EventButtonPayment();
+    }
+    private void EventButtonPayment(){
+        btnthanhtoan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(),thanhtoan.class);
+                startActivity(intent);
+            }
+        });
     }
 
     private void EventButtonContinue() {
@@ -69,7 +79,7 @@ public class GioHangActivity extends AppCompatActivity {
                             if (MainActivity.manggiohang.size() <= 0) {
                                 txtthongbao.setVisibility(View.VISIBLE);
                             } else {
-                                txtthongbao.setVisibility(View.INVISIBLE);
+                                txtthongbao.setVisibility(View.VISIBLE);
                                 gioHangAdapter.notifyDataSetChanged();
                                 EvenUltil();
                             }
