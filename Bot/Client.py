@@ -4,7 +4,6 @@ import webbrowser
 from ExchangesConnect import Test
 import time
 def main(binance):
-    filelog=open("TradeLog.txt","at",encoding="utf-8")
     pygame.init()
     screen=pygame.display.set_mode((646,431))
     pygame.display.set_caption('Bot Client')
