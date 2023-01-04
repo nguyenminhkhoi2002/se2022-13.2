@@ -19,13 +19,7 @@ import android.widget.ListView;
 import androidx.appcompat.widget.Toolbar;
 import android.widget.ViewFlipper;
 import android.widget.ImageView;
-import android.content.Context;
 
-import com.android.volley.RequestQueue;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
-import com.android.volley.toolbox.JsonArrayRequest;
-import com.android.volley.toolbox.Volley;
 import com.bumptech.glide.Glide;
 import com.example.appshopping.R;
 import com.example.appshopping.adapter.LoaiSPAdapter;
@@ -34,13 +28,8 @@ import com.example.appshopping.model.GioHang;
 import com.example.appshopping.model.Loaisp;
 import com.example.appshopping.model.Sanpham;
 import com.example.appshopping.ultil.CheckConnection;
-import com.example.appshopping.ultil.Server;
 import com.google.android.material.navigation.NavigationView;
 //import com.squareup.picasso.Picasso;
-
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
 
 import java.util.ArrayList;
 

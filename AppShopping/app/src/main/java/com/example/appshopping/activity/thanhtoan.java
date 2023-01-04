@@ -1,6 +1,8 @@
 package com.example.appshopping.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
@@ -30,10 +32,13 @@ public class thanhtoan extends AppCompatActivity {
     ImageView qrCodeImg;
     Button openButton;
     ProgressBar br;
+    Toolbar toolbarthanhtoan;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_thanhtoan);
+        toolbarthanhtoan = findViewById(R.id.toolbarthanhtoan);
         qrCodeImg =findViewById(R.id.imageView);
         openButton=findViewById(R.id.button);
         br=findViewById(R.id.progressBar2);
@@ -59,8 +64,20 @@ public class thanhtoan extends AppCompatActivity {
                 }
             }
         });
-
+        ActionToolbar();
     }
+
+    private void ActionToolbar() {
+        setSupportActionBar(toolbarthanhtoan);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        toolbarthanhtoan.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
+    }
+
     public void getPayment(ConnectBinance cn) throws AuthFailureError, JSONException {
 
         String adv = Integer.toString((int)(Math.random()*1000));
@@ -70,7 +87,7 @@ public class thanhtoan extends AppCompatActivity {
         int tonggia=0;
         for(int i =0;i<MainActivity.manggiohang.size();i++){
             ProductName+=MainActivity.manggiohang.get(i).tensp+",";
-            tonggia+=MainActivity.manggiohang.get(i).soluongsp*MainActivity.manggiohang.get(i).giasp;
+            tonggia+=MainActivity.manggiohang.get(i).giasp;
         }
         try {
             cn.getQRlink(adv,tonggia,ProductName,qrCodeImg);
@@ -86,8 +103,8 @@ public class thanhtoan extends AppCompatActivity {
         String ProductName= "";
         int tonggia=0;
         for(int i =0;i<MainActivity.manggiohang.size();i++){
-            ProductName+=MainActivity.manggiohang.get(i).tensp+",";
-            tonggia+=MainActivity.manggiohang.get(i).soluongsp*MainActivity.manggiohang.get(i).giasp;
+            ProductName+=MainActivity.manggiohang.get(i).getTensp()+",";
+            tonggia+=MainActivity.manggiohang.get(i).getGiasp();
         }
         try {
             cn.openApp(adv,tonggia,ProductName);

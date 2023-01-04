@@ -6,6 +6,15 @@
     android:layout_height="match_parent"
     tools:context=".activity.thanhtoan">
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarthanhtoan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title="Thanh toán"
+        android:background="#8697F4"
+        app:titleTextColor="#FFFFFF"
+        ></androidx.appcompat.widget.Toolbar>
+
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="284dp"
