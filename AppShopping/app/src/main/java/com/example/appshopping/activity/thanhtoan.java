@@ -165,7 +165,6 @@ public class thanhtoan extends AppCompatActivity {
             System.out.println(finalNone);
             JsonObjectRequest jsrq = new JsonObjectRequest(Request.Method.POST, url, jsonbody , response -> {
                 String img ;
-                String deepLink;
                 try {
                     Log.d("Response", response.toString());
                     JSONObject res1 = response.getJSONObject("data");
