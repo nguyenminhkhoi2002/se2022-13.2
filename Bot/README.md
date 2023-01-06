@@ -1,7 +1,7 @@
 # Bot trade crypto
 Bot cung cấp khả năng spot trade được kết nối với binance và sử dụng thuật toán đã được cài đặt từ trước</br>
 ## Download bot v1.0
-[<img src="https://user-images.githubusercontent.com/118048533/210755608-f6f1be92-4d3a-4128-b4ab-73d1845edbeb.png" alt="TradeLog" width="55"></img>](https://github.com/nguyenminhkhoi2002/test/releases/download/v2.0/application.zip)
+[<img src="https://user-images.githubusercontent.com/118048533/210755608-f6f1be92-4d3a-4128-b4ab-73d1845edbeb.png" alt="TradeLog" width="55"></img>](https://github.com/nguyenminhkhoi2002/se2022-13.2/releases/download/v1.0/Bot.zip)
 ### Hoạt động của ứng ụng được mô tả như sau 
 * Màn hình đăng nhâp</br>
 <img src="https://user-images.githubusercontent.com/118048533/210740895-c69ae9b0-77c2-4156-a751-3a7f86b37800.png" alt="login" width="400"></img> </br>
