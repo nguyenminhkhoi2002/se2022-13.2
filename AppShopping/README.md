@@ -51,6 +51,10 @@ Chọn "Thanh toán giỏ hàng" ứng dụng sẽ chuyển đến trang "Thanh 
 <img src="https://user-images.githubusercontent.com/104824157/211203488-b780ca63-b3f6-42e4-ba0c-d52d3a939606.jpg" alt = "thanhtoan" width = "200"> </img>
 <img src="https://user-images.githubusercontent.com/104824157/211203531-5a44e746-3ea4-45cd-a2c0-8cd85599c3cd.jpg" alt = "thanhtoanmotcham" width = "200"> </img>
 </br>
+Cho phép chọn loại tiền để thanh toán:
+</br>
+<img src="https://user-images.githubusercontent.com/104824157/211583350-d6cffdcb-a52a-41e5-bda3-9631254ada72.jpg" alt = "crypto" width = "200"> </img>
+</br>
 * Lưu ý: cài đặt thêm ứng dụng VPN (do dịch vụ của Binance bị hạn chế ở một số quốc gia):
 </br>
 <img src="https://user-images.githubusercontent.com/104824157/211204156-da61810e-3b97-4c86-8155-c0a305cafd20.jpg" alt = "hanche" width = "200"> </img>
