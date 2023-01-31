@@ -126,7 +126,7 @@ public class thanhtoan extends AppCompatActivity {
         }
 
 
-        private final String[] key ={"skb7fqzeegityntdeigvnf5kojkl4vqkt0zxjfbgxybh66ciek7bcsbkogvyrim1","wbdniv6aaafuwnwmlh8if9xwdnegg9mh05p6f49einpol1jrw8oiqffvy9wctzce"};
+        private final String[] key ={"mhrahnj583jov5y6rrni8wf3ocmnu18xa5dg6guaoxaljjejolq2lv4hn5qbrrrk","l2kfohwgtukk2ez3lwyw5ys04wppoabtrnkdxuewcah9wmzoyiz2euyrxtzjp4j5"};
         public void getQRlink(String orderID,int gia, String productName, ImageView imV) throws AuthFailureError, JSONException {
             String url = "https://bpay.binanceapi.com/binancepay/openapi/v2/order";
             Signature sig = new Signature();
