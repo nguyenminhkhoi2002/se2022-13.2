@@ -1,3 +1,8 @@
+# 2 Hình thức trade chủ yếu trong binance <br>
+### Giao dịch spot với tiền mã hóa
+Giao dịch Spot với tiền mã hoá là quá trình mua và bán các tài sản kỹ thuật số như Bitcoin và Ethereum với thanh toán ngay lập tức khi mua hoặc bán. Nói cách khác, tiền mã hoá được luân chuyển trực tiếp giữa những người tham gia thị trường (người mua và người bán). Trong thị trường spot bạn có quyền sở hữu trực tiếp tiền mã hoá và được hưởng các quyền hợp pháp 
+### Giao dịch Futures với tiền mã hoá 
+Trong thị trường Futures, bạn đang giao dịch các hợp đồng đại diện cho giá trị của một loại tiền mã hoá cụ thể. Khi bạn mua hợp đồng tương lai, nó có nghĩa, ở thời điểm hiện tại bạn sẽ không sở hữu tài sản cơ sở. Thay vào đó, cái bạn sở hữu là một hợp đồng với thoả thuận mua hoặc bán một số tiền mã hoá cụ thể trong một ngày trong tương lai
 # Bot trade crypto
 Bot cung cấp khả năng spot trade được kết nối với binance và sử dụng thuật toán đã được cài đặt từ trước</br>
 ## Download bot v1.0
