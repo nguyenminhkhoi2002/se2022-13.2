@@ -1,6 +1,6 @@
 # se2022- Nhóm 13.2: Tìm hiểu về Blockchain ứng dụng.
 ## Đề tài: Tìm hiểu về Blockchain và code một app kết nối với sàn giao dịch Binance, sử dụng Binance API để thiết kế 1 thuật toán tự động trading.
-## Phần I: Nội dung cơ bản về Blockchain
+## Nội dung cơ bản về Blockchain
 ### I. Khái niệm
 * Blockchain là công nghệ chuỗi – khối, cho phép truyền tải dữ liệu một cách an toàn dựa trên hệ thống mã hóa vô cùng phức tạp (tương tự như cuốn sổ cái kế toán của một công ty, nơi mà tiền được giám sát chặt chẽ và ghi nhận mọi giao dịch trên mạng ngang hàng). 
 * Mỗi khối (block) đều chứa thông tin về thời gian khởi tạo và được liên kết với khối trước đó, kèm theo đó là một mã thời gian và dữ liệu giao dịch. Dữ liệu khi đã được mạng lưới chấp nhận thì sẽ không có cách nào thay đổi được. Blockchain được thiết kế để ***chống lại việc gian lận, thay đổi của dữ liệu***.
